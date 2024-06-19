@@ -1,0 +1,53 @@
+    Funcionalidade: Login
+    Cenário: Login com credenciais válidas
+    Dado que o usuário está na página de login
+    Quando o usuário insere o nome de usuário válido
+    E o usuário insere a senha válida
+    E o usuário clica no botão de login
+    Então o usuário deve ser redirecionado para a página principal do sistema
+    
+    
+    Funcionalidade: Login
+    Cenário: Login com senha incorreta
+    Dado que o usuário está na página de login
+    Quando o usuário insere o nome de usuário "usuarioValido"
+    E o usuário insere a senha "senhaInvalida"
+    E o usuário clica no botão de login
+    Então o sistema deve exibir uma mensagem de erro apropriada
+    Como quero verificar que a mensagem de erro é "Sua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos."
+    
+  
+  	Funcionalidade: Criação de Tarefas
+    Cenário: Criar uma tarefa com sucesso
+    Dado que o usuário está autenticado e na página de criação de tarefas
+    Quando o usuário seleciona a categoria com valor "2"
+    E o usuário seleciona a opção de reprodutibilidade com valor "10"
+    E o usuário seleciona a opção de severidade com valor "10"
+    E o usuário seleciona a opção de prioridade com valor "30"
+    E o usuário preenche o campo resumo com "Teste de Software"
+    E o usuário preenche o campo descrição com "Testar Plataforma"
+    E o usuário preenche o campo passos para reproduzir com "Escrever casos de teste, desenvolver e rodar."
+    E o usuário preenche o campo informações adicionais com "prazo de 48 horas"
+    E o usuário seleciona a tag com valor "5"
+    E o usuário clica no botão de confirmar tarefa
+    Então a tarefa deve ser criada com sucesso
+   
+   
+    Funcionalidade: Criação de Tarefas
+    Cenário: Criar uma tarefa sem preencher o campo Category ID
+    Dado que o usuário está autenticado e na página de criação de tarefas
+    Quando o usuário não preenche o campo Category ID
+    E o usuário seleciona a opção de reprodutibilidade com valor "10"
+    E o usuário seleciona a opção de severidade com valor "10"
+    E o usuário seleciona a opção de prioridade com valor "30"
+    E o usuário preenche o campo resumo com "Teste de Software"
+    E o usuário preenche o campo descrição com "Testar Plataforma"
+    E o usuário preenche o campo passos para reproduzir com "Escrever casos de teste, desenvolver e rodar."
+    E o usuário preenche o campo informações adicionais com "prazo de 48 horas"
+    E o usuário seleciona a tag com valor "5"
+    E o usuário clica no botão de confirmar tarefa
+    Então o sistema deve exibir uma mensagem de erro "APPLICATION ERROR"
+    Como quero verificar que a mensagem de erro exibida é "APPLICATION ERROR"
+   
+  	
+  
